@@ -1,7 +1,7 @@
 {
-  "name": "@fms/types",
+  "name": "@fms/validation",
   "version": "0.0.1",
-  "description": "Shared type for the our entire repository",
+  "description": "Shared validation for the our entire repository",
   "main": "index.ts",
   "types": "index.ts",
   "files": [

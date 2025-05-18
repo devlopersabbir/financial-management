@@ -1,5 +1,5 @@
 {
-  "name": "task-management",
+  "name": "financial-management",
   "private": true,
   "scripts": {
     "build": "turbo run build",

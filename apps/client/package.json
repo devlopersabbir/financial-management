@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
-    "@repo/types": "workspace:*",
+    "@fms/ui": "workspace:*",
+    "@fms/validation": "workspace:*",
+    "@fms/types": "workspace:*",
+    "@fms/environment": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "next": "15.3.2"

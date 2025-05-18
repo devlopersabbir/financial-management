@@ -17,9 +17,19 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "studio": "drizzle-kit studio --port 4000",
+    "clean": "rm -rf src/uploads && rm -rf src/database/migrations && tsx src/database/clean.ts",
+    "clean:build": "rm -rf src/uploads && rm -rf src/database/migrations && tsx src/database/clean.ts && bun run generate && bun run migrate && bun run seed",
+    "generate": "drizzle-kit generate",
+    "migrate": "cross-env DB_MIGRATING=true tsx src/database/migrate.ts",
+    "seed": "cross-env DB_SEEDING=true tsx src/database/seed.ts",
+    "action": "cross-env tsx src/database/action.ts"
   },
   "dependencies": {
+    "@fms/types": "workspace:*",
+    "@fms/validation": "workspace:*",
+    "@fms/environment": "workspace:*",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",
