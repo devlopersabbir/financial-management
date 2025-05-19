@@ -1,5 +1,5 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@24studio/eslint-config",
   "version": "0.0.0",
   "type": "module",
   "private": true,

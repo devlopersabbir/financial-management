@@ -1,3 +1,4 @@
+import { CreateUserRequest } from "@24studio/types";
 export default function Home() {
   return (
     <div>
