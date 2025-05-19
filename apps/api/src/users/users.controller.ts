@@ -1,20 +1,22 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import { Body, Controller, Get, Post, Query, Res } from "@nestjs/common";
 import { UsersService } from "./users.service";
-// import {} from "@24studio/types";
+import { Response } from "express";
+import type { CreateUserRequest } from "@24studio/types";
 
 @Controller("users")
 export class UsersController {
   constructor(private readonly userService: UsersService) {}
 
   @Post()
-  async create(@Body() userRequestBody: any) {
-    console.log(userRequestBody);
-    return "created!";
+  async create(@Body() data: CreateUserRequest, @Res() res: Response) {
+    const user = await this.userService.store(data);
+    return res.status(200).json(user);
   }
 
   @Get()
-  findAll() {
-    const data = this.userService.index();
+  findAll(@Query() query: any) {
+    console.log(query);
+    const data = this.userService.index(query);
     return data;
   }
 }
