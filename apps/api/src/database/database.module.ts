@@ -20,5 +20,6 @@ import { DRIZZLE_CONNECTION } from './database.connection';
       inject: [ConfigService],
     },
   ],
+  exports: [DRIZZLE_CONNECTION],
 })
 export class DatabaseModule {}

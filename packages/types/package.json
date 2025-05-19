@@ -1,0 +1,24 @@
+{
+  "name": "@24studio/types",
+  "version": "0.0.2",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@24studio/eslint-config": "workspace:*",
+    "@24studio/typescript-config": "workspace:*",
+    "@types/node": "^22.15.19",
+    "eslint": "^9.27.0",
+    "typescript": "^5.8.3"
+  }
+}

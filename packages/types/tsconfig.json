@@ -1,0 +1,10 @@
+{
+  "extends": "@24studio/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "strict": false,
+    "skipLibCheck": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
