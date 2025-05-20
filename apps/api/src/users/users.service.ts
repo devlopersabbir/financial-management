@@ -25,7 +25,12 @@ export class UsersService {
           "User email already exists",
           HttpStatus.BAD_REQUEST,
         );
-      const [user] = await tx.insert(schema.users).values(data).returning();
+      const [user] = await tx
+        .insert(schema.users)
+        .values({
+          name: data.name || "Anonymous",
+        })
+        .returning();
       if (!user)
         throw new HttpException(
           "Fail to create user",
