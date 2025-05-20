@@ -1,5 +1,5 @@
 export class CreateUserRequest {
-  name: string;
+  name?: string;
   email: string;
   passowrd?: string;
 }
